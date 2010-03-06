@@ -1,0 +1,47 @@
+# These are the minimum commands to support.
+#  State setting commands should be handled by the dc structure.
+#
+
+arc
+bezier
+clip-path
+circle
+color
+ellipse
+line
+path
+point
+polyline
+polygon
+rectangle
+roundRectangle
+text
+
+# For dC  (add these)
+scale
+skewX
+skewY
+translate
+viewbox
+
+# Font Handling
+It looks like image magick can take either an xfont name
+(and it will use X to render the font)
+
+Or it can take a filename (*.ttf  -- uses Freetype)
+                          (*.pfb  -- uses Ghostscript) 
+
+to render the font. 
+
+If desired a "@" can be inserted in front of the font name to
+force freetype rendering. 
+
+So, choosing the font amounts to choosing the filename. 
+If the font cannot be found, then an error will occur while drawing. 
+
+
+
+
+
+
+

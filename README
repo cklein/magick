@@ -1,0 +1,6 @@
+An interface to ImageMagick.
+
+You must have ImageMagick installed > 5.5.2
+
+You may have to modify setup.py to point to your ImageMagick Location.
+

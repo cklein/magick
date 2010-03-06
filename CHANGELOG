@@ -1,0 +1,34 @@
+Version 0.6
+  Added define statement so it would compile with Image Magick 6.2.3
+  Changed magick.imresize to magick.resize
+
+Version 0.5
+  Added Windows Installer (and modified setup.py file)
+  Added Image Annotation (special character handling)
+  Added Get Type Metric code. 
+
+Version 0.4.2
+  Bugfixes.  This version works with Kiva backend.
+
+Version 0.4
+  Added support for drawing clipping masks.
+  Clipping masks are masks where transparency is used to prevent operations
+    from occuring when internal syncing is done.  Some operations make use of them
+    and some don't (it depends on whether or not internal Clone Images use 0,0 for
+    exact copies or not).  
+  All image methods make use of clipping masks.  Most of the magick function
+    operations do not. 
+  You can always use img.setpixels(somefunc(img,...).toarray()) to apply the result
+    of an operation using the clipping path. 
+
+Version 0.3
+  Bug fixes from testing through several examples
+  Addition of floats as entries for resizing given scaling factors
+  Addition of many examples in examples.py to show how to use the interface
+  Change resize to imresize  to not interfere with Numeric
+
+Version 0.2
+  Added most of the drawing commands
+
+Version 0.1
+  First release

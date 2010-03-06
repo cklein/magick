@@ -1,0 +1,31 @@
+*  Finish the drawing interface ---  currently draw workds with a variety of objects 
+   and complete functionality is available.  The drawing interface tries to tame the raw 
+   power of the drawing commands, by separating the graphic context attribute setting from 
+   the drawing commands using the drawinfo object.  The file mindraw.py contains a list of the  
+   methods that this drawinfo object needs.  These methods just take parameters and produce 
+   attach a string to the prim method of the object (in C).  This string will be fed to the 
+   ImageMagick engine when the drawinfo object is delivered to the draw command. 
+
+*  Write a generalized slicing interface to Images (the methods are there, but is there
+   a sensible way to think about slicing images?)  This may be more effort than it's worth.
+
+DONE:   Add Annotate functionality aside from general drawing (making use of the special format characters)
+       
+*  How do clip-path's work? 
+   It looks like clip-path's can all be done within the drawing primitives.
+   Or, we could Set an Image Attribute with the name of a clipping path and then use 
+   DrawClipPath with that name.
+   
+   The easiest thing to do may be to use the drawing info context object to build up a string
+   of primitives and then have an image method called clip_path that takes a drawinfo object
+   as input, and uses it to set the image attribute and then calls clip_path. 
+
+   The clip_mask then gets set. 
+     
+started:  Write image-magick backend for kiva --- to generate an mimage.
+     Not sure how fast this will be, but it can be complete and relatively 
+     similar to the display postscript model.   
+     This could be used to support formats that ImageMagick supports that the PIL doesn't. 
+     It will also help to clarify further the kiva core. 
+
+

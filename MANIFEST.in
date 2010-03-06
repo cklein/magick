@@ -1,0 +1,7 @@
+include *.txt
+include *.py
+include *.c
+include LICENSE
+include TODO
+include CHANGELOG
+include testimages/*.*
