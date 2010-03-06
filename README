@@ -1,6 +1,3 @@
-An interface to ImageMagick.
+An interface to GraphicsMagick.
 
-You must have ImageMagick installed > 5.5.2
-
-You may have to modify setup.py to point to your ImageMagick Location.
-
+This is a fork of http://pypi.python.org/pypi/magick/0.5
